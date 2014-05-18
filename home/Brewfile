@@ -1,0 +1,21 @@
+tap homebrew/versions || true
+tap sanemat/font || true
+update || true
+# tools
+install zsh || true
+install git || true
+install hub || true
+install tig || true
+install tree || true
+install jq || true
+install yuicompressor || true
+# for build
+install imagemagick || true
+install gsl || true
+install bison || true
+install ghostscript || true
+# fonts
+install ricty || true
+# platforms
+install haskell-platform || true
+install node || true

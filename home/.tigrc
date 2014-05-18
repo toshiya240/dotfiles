@@ -1,0 +1,8 @@
+color date yellow default
+color graph-commit magenta default
+color diff-index cyan default
+color diff-stat cyan default
+
+# keybindings
+bind generic < move-first-line
+bind generic > move-last-line
