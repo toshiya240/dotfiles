@@ -105,7 +105,7 @@ function! SearchDash()
   execute s:cmd
   redraw!
 endfunction
-map <leader>d :call SearchDash()<CR>
+map <silent><leader>d :call SearchDash()<CR>
 
 "----------------------------------------------------------------------
 " NeoBundle
@@ -124,7 +124,9 @@ NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'h1mesuke/unite-outline'
+NeoBundle 'Shougo/unite-outline'
+NeoBundle 'Shougo/neomru.vim'
+NeoBundle 'sgur/unite-qf'
 NeoBundle 'rcmdnk/vim-markdown'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'autodate.vim'
