@@ -40,6 +40,7 @@ set cmdheight=2
 set ambiwidth=double    " for characters with East Asian Width Class Ambiguous
 set showmatch			" 閉じ括弧が挿入されたときに、一瞬対応する括弧にジャンプする
 set nowrap
+set linebreak
 set scrolloff=5
 set listchars=eol:$,tab:>-
 
@@ -84,6 +85,8 @@ behave mswin
 
 "----------------------------------------------------------------------
 " misc
+
+set helplang=en,ja
 
 " man
 source $VIMRUNTIME/ftplugin/man.vim

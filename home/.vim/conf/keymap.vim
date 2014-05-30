@@ -2,14 +2,13 @@ nnoremap <Space> <PageDown>
 nnoremap <S-Space> <PageUp>
 "nnoremap <BS>    <PageUp>
 nnoremap <C-h>   <PageUp>
-nnoremap <C-f>   <Right>
-nnoremap <C-b>   <Left>
 
 vnoremap <Space> <PageDown>
 "vnoremap <BS>    <PageUp>
 vnoremap <C-h>   <PageUp>
-vnoremap <C-f>   <Right>
-vnoremap <C-b>   <Left>
+
+inoremap <C-f> <Right>
+inoremap <C-b> <Left>
 
 " for command line 
 cnoremap <C-a> <Home>
@@ -28,12 +27,11 @@ vnoremap p <Esc>:let current_reg = @"<CR>gvs<C-R>=current_reg<CR><Esc>
 " text is lost and it only works for putting the current register.
 "vnoremap p "_dp
 
-nnoremap <leader>g :grep 
-
 " Unite
 nnoremap <silent><leader>u :<C-u>Unite -start-insert source -buffer-name=source<CR>
 nnoremap <silent><leader>f :<C-u>Unite -start-insert file -buffer-name=file<CR>
-nnoremap <silent><leader>b :<C-u>Unite buffer -buffer-name=buffer<CR>
+nnoremap <silent><leader>b :<C-u>Unite -start-insert buffer -buffer-name=buffer<CR>
+nnoremap <silent><leader>g :<C-u>Unite grep -buffer-name=grep<CR>
 nnoremap <silent><leader>r :<C-u>Unite file_mru -buffer-name=file_mru<CR>
 nnoremap <silent><leader>R :<C-u>Unite register -buffer-name=register<CR>
 nnoremap <silent><leader>o :<C-u>Unite outline -buffer-name=outline<CR>
