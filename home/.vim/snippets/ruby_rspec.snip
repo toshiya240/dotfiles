@@ -1,0 +1,64 @@
+snippet    describe
+    describe "${1:desc}" do
+      ${2:TARGET}
+    end
+
+snippet    it_do
+    it "${1:desc}" do
+      ${2:TARGET}
+    end
+
+snippet    it
+    it { ${1:TARGET} }
+
+snippet    it_should
+    it { should ${1:TARGET} }
+
+snippet    it_should_not
+    it { should_not ${1:TARGET} }
+
+snippet    its_should
+    its(${1:subject}) { should ${2:TARGET} }
+
+snippet    its_should_not
+    its(${1:subject}) { should_not ${2:TARGET} }
+
+snippet    expect_to
+    expect(${1:subject}).to ${2}
+
+snippet    expect_not_to
+    expect(${1:subject}).not_to ${2}
+
+snippet    have_title
+    have_title(${1:title})
+
+snippet    have_content
+    have_content(${1:content})
+
+snippet    have_selector
+    have_selector(${1:selector}${2:, text: }${3:#:text})
+
+snippet    have_link
+    have_link(${1:text}${2:, href: }${3:#:href})
+
+snippet    let
+    let(${1:var}) { ${2:TARGET} }
+
+snippet    before_do
+    before do
+      ${1:TARGET}
+    end
+
+snippet    before
+    before { ${1:TARGET} }
+
+snippet    subject
+    subject { ${1:TARGET} }
+
+snippet    shared_examples_for
+    shared_examples_for "${1:desc}" do
+      ${2:TARGET}
+    end
+
+snippet    it_should_behave_like
+    it_should_behave_like "${1:shared_example}"
