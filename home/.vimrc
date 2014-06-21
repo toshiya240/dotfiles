@@ -146,6 +146,7 @@ NeoBundle 'majutsushi/tagbar'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'gcmt/wildfire.vim'
+NeoBundle 'kchmck/vim-coffee-script'
 
 " enable ftplugin
 filetype plugin on

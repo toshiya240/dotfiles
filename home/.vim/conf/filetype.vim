@@ -13,7 +13,8 @@ if has("autocmd")
   autocmd FileType java set formatoptions=croqlB cindent comments=sr:/*,mb:*,ex:*/,://
   autocmd FileType php set cindent shiftwidth=4
   autocmd FileType text setlocal textwidth=78
-  autocmd FileType javascript set cindent shiftwidth=4
+  autocmd FileType javascript set cindent shiftwidth=2
+  autocmd FileType coffee set shiftwidth=2
   autocmd FileType python set shiftwidth=4
   autocmd FileType ruby set shiftwidth=2
   autocmd FileType xml,html,css,yaml set smartindent shiftwidth=2

@@ -31,7 +31,7 @@ vnoremap p <Esc>:let current_reg = @"<CR>gvs<C-R>=current_reg<CR><Esc>
 nnoremap <silent><leader>u :<C-u>Unite -start-insert source -buffer-name=source<CR>
 nnoremap <silent><leader>f :<C-u>Unite -start-insert file -buffer-name=file<CR>
 nnoremap <silent><leader>b :<C-u>Unite -start-insert buffer -buffer-name=buffer<CR>
-nnoremap <silent><leader>g :<C-u>Unite grep -no-quit -buffer-name=grep<CR>
+nnoremap <silent><leader>g :<C-u>Unite grep -no-quit -keep-focus -buffer-name=grep<CR>
 nnoremap <silent><leader>r :<C-u>Unite file_mru -buffer-name=file_mru<CR>
 nnoremap <silent><leader>R :<C-u>Unite register -buffer-name=register<CR>
 nnoremap <silent><leader>o :<C-u>Unite outline -buffer-name=outline<CR>
