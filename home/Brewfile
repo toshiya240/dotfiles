@@ -1,5 +1,6 @@
 tap homebrew/versions || true
 tap sanemat/font || true
+tap peco/peco || true
 update || true
 # tools
 install zsh || true
@@ -8,7 +9,7 @@ install hub || true
 install tig || true
 install tree || true
 install jq || true
-install yuicompressor || true
+install peco || true
 # for build
 install imagemagick || true
 install gsl || true
