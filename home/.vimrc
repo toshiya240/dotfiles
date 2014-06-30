@@ -23,6 +23,7 @@ scriptencoding utf-8
 " ファイル関連
 set nobackup
 set noswapfile
+set noundofile
 
 "----------------------------------------------------------------------
 " 画面表示関係
