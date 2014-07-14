@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<root>
+  <replacementdef>
+    <replacementname>EMACS_MODE_IGNORE_APPS</replacementname>
+    <replacementvalue>
+      MacVim,
+      iTerm2
+    </replacementvalue>
+  </replacementdef>
+  <replacementdef>
+    <replacementname>MY_IGNORE_APPS</replacementname>
+    <replacementvalue>
+      MacVim,
+      iTerm2
+    </replacementvalue>
+  </replacementdef>
+  <item>
+    <name>Command line editing</name>
+    <item>
+      <not>{{MY_IGNORE_APPS}}</not>
+      <name>Control+I to TAB</name>
+      <identifier>private.ctrl-I</identifier>
+      <autogen>
+        __KeyToKey__
+        KeyCode::I, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
+        KeyCode::TAB
+      </autogen>
+    </item>
+    <item>
+      <not>{{MY_IGNORE_APPS}}</not>
+      <name>Control+U to Clear input text</name>
+      <identifier>private.ctrl-U</identifier>
+      <autogen>
+        __KeyToKey__
+        KeyCode::U, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
+        KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L,
+        KeyCode::DELETE
+      </autogen>
+    </item>
+    <item>
+      <not>{{MY_IGNORE_APPS}}</not>
+      <name>Control+W to Delete left word</name>
+      <identifier>private.ctrl-W</identifier>
+      <autogen>
+        __KeyToKey__
+        KeyCode::W, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
+        KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L,
+        KeyCode::DELETE
+      </autogen>
+    </item>
+    <item>
+      <not>{{MY_IGNORE_APPS}}</not>
+      <name>Control+[ to Escape</name>
+      <identifier>private.ctrl-[</identifier>
+      <autogen>
+        __KeyToKey__
+        KeyCode::BRACKET_LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
+        KeyCode::ESCAPE
+      </autogen>
+    </item>
+  </item>
+
+  <appdef>
+    <appname>MacVim</appname>
+    <equal>org.vim.MacVim</equal>
+  </appdef>
+  <appdef>
+    <appname>iTerm2</appname>
+    <equal>com.googlecode.iterm2</equal>
+  </appdef>
+</root>
