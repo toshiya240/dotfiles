@@ -4,14 +4,16 @@
     <replacementname>EMACS_MODE_IGNORE_APPS</replacementname>
     <replacementvalue>
       MacVim,
-      iTerm2
+      iTerm2,
+      Xcode
     </replacementvalue>
   </replacementdef>
   <replacementdef>
     <replacementname>MY_IGNORE_APPS</replacementname>
     <replacementvalue>
       MacVim,
-      iTerm2
+      iTerm2,
+      Xcode
     </replacementvalue>
   </replacementdef>
   <item>
@@ -67,5 +69,9 @@
   <appdef>
     <appname>iTerm2</appname>
     <equal>com.googlecode.iterm2</equal>
+  </appdef>
+  <appdef>
+    <appname>Xcode</appname>
+    <equal>com.apple.dt.Xcode</equal>
   </appdef>
 </root>
