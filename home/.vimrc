@@ -122,7 +122,8 @@ map <silent><leader>d :call SearchDash()<CR>
 if has('vim_starting')
     set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
-call neobundle#rc(expand('~/.vim/bundle/'))
+
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -148,6 +149,8 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'gcmt/wildfire.vim'
 NeoBundle 'kchmck/vim-coffee-script'
+
+call neobundle#end()
 
 " enable ftplugin
 filetype plugin on
