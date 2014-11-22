@@ -4,5 +4,5 @@ color diff-index cyan default
 color diff-stat cyan default
 
 # keybindings
-bind generic < move-first-line
+bind generic <LessThan> move-first-line
 bind generic > move-last-line
