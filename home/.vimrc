@@ -1,13 +1,12 @@
 " vimrc file.
+set encoding=utf-8
+scriptencoding utf-8
 
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
   finish
 endif
  
-" vi 非互換モードにする
-set nocompatible
-
 "----------------------------------------------------------------------
 " 日本語を扱うために
 "
@@ -16,8 +15,6 @@ set fileencodings=ucs-bom,iso-2022-jp,utf-8,euc-jp,cp932
 set iminsert=0
 set imsearch=0
 
-set encoding=utf-8
-scriptencoding utf-8
 
 "----------------------------------------------------------------------
 " ファイル関連
@@ -56,20 +53,19 @@ else
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 
-" syntax highlighting
-syntax on
-colorscheme mycolor
+augroup vimrc
+  au!
+  au BufReadPost quickfix set winheight=20
 
+  " When editing a file, always jump to the last known cursor position.
+  " Don't do it when the position is invalid or when inside an event handler
+  " (happens when dropping a file on gvim).
+  autocmd BufReadPost *
+        \ if line("'\"") > 0 && line("'\"") <= line("$") |
+        \   exe "normal g`\"" |
+        \ endif
+augroup END
 
-au BufReadPost quickfix set winheight=20
-
-" When editing a file, always jump to the last known cursor position.
-" Don't do it when the position is invalid or when inside an event handler
-" (happens when dropping a file on gvim).
-autocmd BufReadPost *
-\ if line("'\"") > 0 && line("'\"") <= line("$") |
-\   exe "normal g`\"" |
-\ endif
 
 "----------------------------------------------------------------------
 " search
@@ -168,3 +164,7 @@ filetype plugin on
 filetype indent on
 
 runtime! conf/*.vim
+
+" syntax highlighting
+syntax on
+colorscheme mycolor
