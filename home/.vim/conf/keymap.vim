@@ -37,3 +37,6 @@ nnoremap <silent><leader>R :<C-u>Unite register -buffer-name=register<CR>
 nnoremap <silent><leader>o :<C-u>Unite outline -buffer-name=outline<CR>
 nnoremap <silent><leader>q :<C-u>Unite qf -buffer-name=qf<CR>
 nnoremap <silent><leader>k :<C-u>Unite bookmark -buffer-name=bookmark<CR>
+
+" toggle spell
+nnoremap <silent><leader>s :<C-u>set spell!<CR>:set spell?<CR>

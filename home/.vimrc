@@ -102,6 +102,8 @@ augroup END
 
 set helplang=en,ja
 
+set spelllang=en,cjk
+
 " man
 source $VIMRUNTIME/ftplugin/man.vim
 set keywordprg=man
