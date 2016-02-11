@@ -3,6 +3,8 @@ color graph-commit magenta default
 color diff-index cyan default
 color diff-stat cyan default
 
+set vertical-split = false
+
 # keybindings
 bind generic <LessThan> move-first-line
 bind generic > move-last-line
