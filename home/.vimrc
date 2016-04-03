@@ -10,7 +10,6 @@ endif
 "----------------------------------------------------------------------
 " 日本語を扱うために
 "
-"set fileencodings=iso-2022-jp,utf-8,cp932
 set fileencodings=ucs-bom,iso-2022-jp,utf-8,euc-jp,cp932
 set iminsert=0
 set imsearch=0
@@ -42,7 +41,7 @@ set linebreak
 set scrolloff=5
 set listchars=eol:$,tab:>-
 
-set nohlsearch
+set hlsearch
 
 " Insert モードでカーソル形状変更
 if exists('$TMUX')
@@ -86,7 +85,7 @@ set autoindent
 set cindent shiftwidth=4
 set cinkeys=0{,0},0),0:,0#,!<Tab>,!^F,o,O,e
 
-set history=50
+set history=100
 
 " mouse の動作を MS-Windows のようにする
 behave mswin
@@ -101,12 +100,10 @@ augroup END
 " misc
 
 set helplang=en,ja
-
 set spelllang=en,cjk
 
 " man
 source $VIMRUNTIME/ftplugin/man.vim
-set keywordprg=man
 " autodate
 "" フォーマットを指定する
 let autodate_format = '%Y/%m/%d %H:%M:%S'
@@ -139,28 +136,34 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Bundles
 NeoBundle 'Shougo/vimproc'
-NeoBundle 'Shougo/neocomplete'
-NeoBundle 'Shougo/neosnippet'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'Shougo/vimshell'
+
+"" Unite
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/unite-outline'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'thinca/vim-unite-history'
 NeoBundle 'kmnk/vim-unite-giti.git'
-NeoBundle 'sgur/unite-qf'
-NeoBundle 'godlygeek/tabular'
+
+" editing
+NeoBundle 'Shougo/neocomplete'
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'gcmt/wildfire.vim'
+NeoBundle 'Align'
+
+" filetype
 NeoBundle 'joker1007/vim-markdown-quote-syntax'
 NeoBundle 'rcmdnk/vim-markdown'
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'autodate.vim'
-NeoBundle 'info.vim'
-NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'majutsushi/tagbar'
+NeoBundle 'kchmck/vim-coffee-script'
+
+" devel
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'scrooloose/syntastic'
-NeoBundle 'gcmt/wildfire.vim'
-NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'majutsushi/tagbar'
+
+NeoBundle 'info.vim'
+NeoBundle 'itchyny/lightline.vim'
 
 call neobundle#end()
 

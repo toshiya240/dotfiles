@@ -7,21 +7,21 @@ if has("autocmd")
   " Also load indent files, to automatically do language-dependent indenting.
   filetype plugin indent on
 
-  autocmd FileType *     set formatoptions=tcrqlmB nocindent comments&
-  autocmd FileType vim set shiftwidth=2
-  autocmd FileType c,cpp set formatoptions=croqlB cindent comments=sr:/*,mb:*,ex:*/,://
-  autocmd FileType java set formatoptions=croqlB cindent comments=sr:/*,mb:*,ex:*/,://
-  autocmd FileType php set cindent shiftwidth=4
-  autocmd FileType text setlocal textwidth=78
-  autocmd FileType javascript set cindent shiftwidth=2
-  autocmd FileType coffee set shiftwidth=2
-  autocmd FileType python set shiftwidth=4
-  autocmd FileType ruby set shiftwidth=2
-  autocmd FileType xml,html,css,yaml set smartindent shiftwidth=2
-  autocmd FileType mail set tw=60
+  autocmd FileType *                 setlocal formatoptions=tcrqlmB nocindent    comments&
+  autocmd FileType vim               setlocal shiftwidth=2
+  autocmd FileType c,cpp             setlocal formatoptions=croqlB  cindent      comments=sr:/*,mb:*,ex:*/,://
+  autocmd FileType java              setlocal formatoptions=croqlB  cindent      comments=sr:/*,mb:*,ex:*/,://
+  autocmd FileType php               setlocal cindent               shiftwidth=4
+  autocmd FileType text              setlocal textwidth=78
+  autocmd FileType javascript        setlocal cindent               shiftwidth=2
+  autocmd FileType coffee            setlocal shiftwidth=2
+  autocmd FileType python            setlocal shiftwidth=4
+  autocmd FileType ruby              setlocal shiftwidth=2
+  autocmd FileType xml,html,css,yaml setlocal smartindent           shiftwidth=2
+  autocmd FileType mail              setlocal tw=60
 
   " For ChangeLog
   autocmd FileType changelog let g:changelog_username="Toshiya NISHIO <toshiya240@gmail.com>"
-  autocmd FileType changelog set noexpandtab
+  autocmd FileType changelog setlocal noexpandtab
 
 endif " has("autocmd")
