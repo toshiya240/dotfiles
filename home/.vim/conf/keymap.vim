@@ -1,3 +1,4 @@
+nnoremap Y y$
 inoremap <C-f> <Right>
 inoremap <C-b> <Left>
 
@@ -21,9 +22,6 @@ nnoremap <silent><C-l> :<C-u>nohlsearch<CR><C-l>
 
 " toggle spell
 nnoremap <silent><leader>s :<C-u>set spell!<CR>:set spell?<CR>
-
-" wildfire
-map <SPACE> <Plug>(wildfire-fuel)
 
 " emmet
 let g:user_emmet_leader_key = '<C-c>'

@@ -18,8 +18,10 @@ set imsearch=0
 "----------------------------------------------------------------------
 " ファイル関連
 set nobackup
-set noswapfile
-set noundofile
+set swapfile
+set directory=~/.vim/tmp/swap//
+set undofile
+set undodir=~/.vim/tmp/undo
 
 "----------------------------------------------------------------------
 " 画面表示関係
@@ -34,9 +36,12 @@ set ruler				" show the cursor position all the time
 set showcmd				" display incomplete commands
 set laststatus=2		" show the status line all the time
 set cmdheight=2
+set pumheight=10
 set ambiwidth=double    " for characters with East Asian Width Class Ambiguous
 set showmatch			" 閉じ括弧が挿入されたときに、一瞬対応する括弧にジャンプする
+set matchtime=1
 set nowrap
+set display=lastline
 set linebreak
 set scrolloff=5
 set listchars=eol:$,tab:>-
@@ -149,8 +154,11 @@ NeoBundle 'Shougo/neocomplete'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'mattn/emmet-vim'
-NeoBundle 'gcmt/wildfire.vim'
 NeoBundle 'Align'
+NeoBundle 'tpope/vim-repeat'
+
+" motion
+NeoBundle 'tpope/vim-unimpaired'
 
 " filetype
 NeoBundle 'joker1007/vim-markdown-quote-syntax'
