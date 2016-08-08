@@ -107,6 +107,10 @@ augroup END
 set helplang=en,ja
 set spelllang=en,cjk
 
+" grep
+set grepprg=ag\ --vimgrep\ $*
+set grepformat=%f:%l:%c:%m
+
 " man
 source $VIMRUNTIME/ftplugin/man.vim
 " autodate
