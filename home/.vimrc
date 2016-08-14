@@ -6,6 +6,8 @@ scriptencoding utf-8
 if v:progname =~? "evim"
   finish
 endif
+
+let mapleader="\<Space>"
  
 "----------------------------------------------------------------------
 " 日本語を扱うために
@@ -35,6 +37,7 @@ set cursorline
 set ruler				" show the cursor position all the time
 set showcmd				" display incomplete commands
 set laststatus=2		" show the status line all the time
+set showtabline=2
 set cmdheight=2
 set pumheight=10
 set ambiwidth=double    " for characters with East Asian Width Class Ambiguous
@@ -174,8 +177,10 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'majutsushi/tagbar'
 
+" other
 NeoBundle 'info.vim'
 NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'Konfekt/FastFold'
 
 call neobundle#end()
 
