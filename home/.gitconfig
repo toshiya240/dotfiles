@@ -15,9 +15,13 @@
 [pull]
 	ff = only
 [diff]
-	external = extDiff
+    tool = vimdiff
+[difftool]
+	prompt = false
 [merge]
-	tool = extMerge
+	tool = vimdiff
+[mergetool]
+	prompt = false
 [mergetool "extMerge"]
 	cmd = extMerge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
 	trustExitCode = false
