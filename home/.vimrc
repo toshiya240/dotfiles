@@ -113,6 +113,7 @@ set spelllang=en,cjk
 " grep
 set grepprg=ag\ --vimgrep\ $*
 set grepformat=%f:%l:%c:%m
+autocmd QuickFixCmdPost *grep* cwindow
 
 " man
 source $VIMRUNTIME/ftplugin/man.vim
@@ -154,28 +155,31 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/unite-outline'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'thinca/vim-unite-history'
-NeoBundle 'kmnk/vim-unite-giti.git'
+NeoBundle 'Shougo/tabpagebuffer.vim'
 
 " editing
 NeoBundle 'Shougo/neocomplete'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'tpope/vim-unimpaired'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-repeat'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'Align'
-NeoBundle 'tpope/vim-repeat'
 
-" motion
-NeoBundle 'tpope/vim-unimpaired'
+" devel
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'majutsushi/tagbar'
+"" git
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'gregsexton/gitv'
+NeoBundle 'idanarye/vim-merginal'
+NeoBundle 'cohama/agit.vim'
 
 " filetype
 NeoBundle 'joker1007/vim-markdown-quote-syntax'
 NeoBundle 'rcmdnk/vim-markdown'
 NeoBundle 'kchmck/vim-coffee-script'
-
-" devel
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'majutsushi/tagbar'
 
 " other
 NeoBundle 'info.vim'
