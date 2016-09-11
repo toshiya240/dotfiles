@@ -1,7 +1,7 @@
 " local syntax file - set colors on a per-machine basis:
 " vim: tw=0 ts=4 sw=4
 " Vim color file
-" Last Change: 2014/11/16 20:31:47.
+" Last Change: 2016/09/11 11:28:48.
 
 set background=dark
 hi clear
@@ -30,6 +30,10 @@ hi User1      ctermbg=blue cterm=inverse,bold
 hi User2      ctermbg=magenta cterm=inverse,bold
 hi LineNr     ctermfg=yellow cterm=bold
 hi PMenuSel   ctermfg=white ctermbg=darkgreen cterm=bold
+hi DiffAdd    ctermbg=blue
+hi DiffChange ctermbg=darkgreen
+hi DiffDelete ctermbg=red
+hi DiffText   ctermbg=darkyellow
 " gui
 hi Normal     guifg=#cccccc guibg=#002c2d
 hi Comment    guifg=salmon
