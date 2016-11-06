@@ -9,6 +9,7 @@ if has("autocmd")
 
   autocmd FileType *                 setlocal formatoptions=tcrqlmB nocindent    comments&
   autocmd FileType vim               setlocal shiftwidth=2
+  autocmd FileType zsh               setlocal shiftwidth=2
   autocmd FileType c,cpp             setlocal formatoptions=croqlB  cindent      comments=sr:/*,mb:*,ex:*/,://
   autocmd FileType java              setlocal formatoptions=croqlB  cindent      comments=sr:/*,mb:*,ex:*/,://
   autocmd FileType php               setlocal cindent               shiftwidth=4
