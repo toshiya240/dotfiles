@@ -1,5 +1,5 @@
 " gvimrc file.
-" Last change: 2014/05/17 17:23:45.
+" Last change: 2016/09/24 14:30:52.
 
 " set window size for gui
 set lines=70
@@ -14,3 +14,5 @@ set transparency=10
 colorscheme mycolor
 
 set nohlsearch
+
+set guioptions-=e
