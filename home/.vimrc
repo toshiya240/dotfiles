@@ -180,6 +180,7 @@ NeoBundle 'cohama/agit.vim'
 NeoBundle 'joker1007/vim-markdown-quote-syntax'
 NeoBundle 'rcmdnk/vim-markdown'
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'jvirtanen/vim-octave'
 
 " other
 NeoBundle 'info.vim'
