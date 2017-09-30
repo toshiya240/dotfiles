@@ -36,11 +36,16 @@ def configure(keymap):
     # Key replacement and modifier key definition
 
     # Replacing Right-Alt key with Right-Control
-    keymap.replaceKey("RAlt", "RCtrl")
-
+    #keymap.replaceKey("RAlt", "RCtrl")
 
     # Global keymap which affects any windows
     keymap_global = keymap.defineWindowKeymap()
+
+    # OS の設定で CapsLock <-> Ctrl にする
+    #keymap.replaceKey("CapsLock",    "LCtrl")
+    keymap.replaceKey("Enter",   "RCtrl")
+    # 日本語入力の確定のためにグローバルで Ctrl-M を Return に置き換える
+    keymap_global["Ctrl-M"] = "Return"
 
     # Moving active window by keyboard
     if 1:
