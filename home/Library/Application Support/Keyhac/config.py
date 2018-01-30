@@ -86,8 +86,7 @@ def configure(keymap):
             "Ctrl-OpenBracket": "Esc",
             "Ctrl-U"          : ("Cmd-Shift-Left", "Delete"),
             "Ctrl-W"          : ("Alt-Shift-Left", "Delete"),
-            "Ctrl-J"          : "Return",
-            "Ctrl-M"          : "Return"
+            "Ctrl-J"          : "Return"
     }
     shell_keybinds_ignore_apps = [
             "org.vim.MacVim",
