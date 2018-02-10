@@ -28,7 +28,7 @@ set undodir=~/.vim/tmp/undo
 "----------------------------------------------------------------------
 " 画面表示関係
 "
-set number
+set nonumber
 augroup numberwidth
   autocmd!
   autocmd BufEnter,WinEnter,BufWinEnter * let &l:numberwidth = len(line("$")) + 2
@@ -186,6 +186,7 @@ NeoBundle 'jvirtanen/vim-octave'
 NeoBundle 'info.vim'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'Konfekt/FastFold'
+NeoBundle 'ryanoasis/vim-devicons'
 
 call neobundle#end()
 
