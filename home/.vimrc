@@ -177,6 +177,7 @@ NeoBundle 'idanarye/vim-merginal'
 NeoBundle 'cohama/agit.vim'
 
 " filetype
+NeoBundle 'vim-scripts/fish-syntax'
 NeoBundle 'joker1007/vim-markdown-quote-syntax'
 NeoBundle 'rcmdnk/vim-markdown'
 NeoBundle 'kchmck/vim-coffee-script'
