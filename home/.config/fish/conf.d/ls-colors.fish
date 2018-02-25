@@ -1,4 +1,4 @@
-if status is-interactive
+if status is-interactive >/dev/null
 
     #
     # ls colors

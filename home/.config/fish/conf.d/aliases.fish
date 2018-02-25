@@ -1,5 +1,5 @@
 # set aliases
-if status is-interactive
+if status is-interactive >/dev/null
     alias eng='LANG=C LANGUAGE=C LC_ALL=C'
     if test (uname) = 'Darwin'
         alias ls 'ls -F -G'

@@ -1,5 +1,5 @@
 # at login
-if status is-login; and test -z "$TMUX"
+if status is-login >/dev/null; and test -z "$TMUX"
 
     #
     # Editors

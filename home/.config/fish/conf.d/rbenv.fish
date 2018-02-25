@@ -1,4 +1,4 @@
-if status is-login
+if status is-login >/dev/null
 
     #
     # NOTE: tmux 起動時もログイン扱いなので

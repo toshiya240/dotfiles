@@ -1,4 +1,4 @@
-if status is-interactive
+if status is-interactive >/dev/null
 
     if test -f $HOME/.homesick/repos/homeshick/homeshick.fish
         source $HOME/.homesick/repos/homeshick/homeshick.fish
