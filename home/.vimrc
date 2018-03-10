@@ -159,17 +159,16 @@ NeoBundle 'Shougo/tabpagebuffer.vim'
 
 " editing
 NeoBundle 'Shougo/neocomplete'
+NeoBundle 'Konfekt/FastFold'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-repeat'
-NeoBundle 'mattn/emmet-vim'
 NeoBundle 'Align'
 
 " devel
 NeoBundle 'scrooloose/syntastic'
-NeoBundle 'majutsushi/tagbar'
 "" git
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'gregsexton/gitv'
@@ -178,17 +177,28 @@ NeoBundle 'cohama/agit.vim'
 
 " filetype
 "NeoBundle 'vim-scripts/fish-syntax'
-NeoBundle 'dag/vim-fish'
-NeoBundle 'joker1007/vim-markdown-quote-syntax'
-NeoBundle 'rcmdnk/vim-markdown'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'jvirtanen/vim-octave'
+NeoBundleLazy 'dag/vim-fish'
+NeoBundleLazy 'rcmdnk/vim-markdown'
+NeoBundleLazy 'joker1007/vim-markdown-quote-syntax'
+NeoBundleLazy 'kchmck/vim-coffee-script'
+NeoBundleLazy 'jvirtanen/vim-octave'
+NeoBundleLazy 'mattn/emmet-vim'
+augroup NeoBundleLazyFileType
+  au!
+  au FileType fish         NeoBundleSource vim-fish
+  au FileType markdown     NeoBundleSource vim-markdown vim-markdown-quote-syntax
+  au FileType coffee       NeoBundleSource vim-coffee-script
+  au FileType octave       NeoBundleSource vim-octave
+  au FileType html,xml,css NeoBundleSource emmet-vim
+augroup END
+
+" status line
+NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'majutsushi/tagbar'
+NeoBundle 'ryanoasis/vim-devicons'
 
 " other
 NeoBundle 'info.vim'
-NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'Konfekt/FastFold'
-NeoBundle 'ryanoasis/vim-devicons'
 
 call neobundle#end()
 
