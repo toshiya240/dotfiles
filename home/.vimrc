@@ -28,6 +28,7 @@ set undodir=~/.vim/tmp/undo
 "----------------------------------------------------------------------
 " 画面表示関係
 "
+set t_Co=256
 set nonumber
 augroup numberwidth
   autocmd!
@@ -138,8 +139,8 @@ NeoBundle 'Shougo/vimproc'
 
 "" Unite
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/unite-outline'
 NeoBundle 'Shougo/neomru.vim'
+NeoBundle 'Shougo/unite-outline'
 NeoBundle 'thinca/vim-unite-history'
 NeoBundle 'Shougo/tabpagebuffer.vim'
 

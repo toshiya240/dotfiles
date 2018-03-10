@@ -23,59 +23,67 @@ nnoremap <silent><C-l> :<C-u>nohlsearch<CR><C-l>
 " toggle spell
 nnoremap <silent><leader>s :<C-u>set spell!<CR>:set spell?<CR>
 
-" emmet
-let g:user_emmet_leader_key = '<C-c>'
-
-" Unite
-nnoremap <silent><leader>u :<C-u>Unite source -buffer-name=source<CR>
-nnoremap <silent><leader>f :<C-u>Unite file -buffer-name=file<CR>
-nnoremap <silent><leader>F :<C-u>Unite file -buffer-name=file -input=`expand('%:h')`/*<CR>
-nnoremap <silent><leader><space> :<C-u>Unite -start-insert file_rec/async<CR>
-nnoremap <silent><leader>b :<C-u>Unite buffer_tab -buffer-name=buffer<CR>
-nnoremap <silent><leader>B :<C-u>Unite buffer -buffer-name=buffer<CR>
-nnoremap <silent><leader>t :<C-u>Unite tab -buffer-name=tab<CR>
-nnoremap <silent><leader>r :<C-u>Unite file_mru -buffer-name=file_mru<CR>
-nnoremap <silent><leader>R :<C-u>Unite register -buffer-name=register<CR>
-nnoremap <silent><leader>o :<C-u>Unite outline -buffer-name=outline<CR>
-nnoremap <silent><leader>k :<C-u>Unite bookmark -buffer-name=bookmark<CR>
-
-nnoremap <leader>c <Plug>(unite_restart)
-
 " grep
 nnoremap <silent><leader>/ :grep <C-r><C-w><CR>
 
-" neocomplete
-inoremap <expr><C-g>     neocomplete#undo_completion()
-inoremap <expr><C-l>     neocomplete#complete_common_string()
+if neobundle#is_installed('emmet-vim')
+  let g:user_emmet_leader_key = '<C-c>'
+endif
 
-"" Recommended key-mappings.
-"" <CR>: close popup and save indent.
-inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-function! s:my_cr_function()
-    return neocomplete#close_popup() . "\<CR>"
-    " For no inserting <CR> key.
-    "return pumvisible() ? neocomplete#close_popup() : "\<CR>"
-endfunction
-"" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-"" <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><C-y>  neocomplete#close_popup()."\<C-y>"
-inoremap <expr><C-e>  neocomplete#cancel_popup()."\<C-e>"
-"" Close popup by <Space>.
-"inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() :
-"\<Space>"
+if neobundle#is_installed('unite.vim')
+  nnoremap <silent><leader>u :<C-u>Unite source -buffer-name=source<CR>
+  nnoremap <silent><leader>f :<C-u>Unite file -buffer-name=file<CR>
+  nnoremap <silent><leader>F :<C-u>Unite file -buffer-name=file -input=`expand('%:h')`/*<CR>
+  nnoremap <silent><leader><space> :<C-u>Unite -start-insert file_rec/async<CR>
+  nnoremap <silent><leader>b :<C-u>Unite buffer_tab -buffer-name=buffer<CR>
+  nnoremap <silent><leader>B :<C-u>Unite buffer -buffer-name=buffer<CR>
+  nnoremap <silent><leader>t :<C-u>Unite tab -buffer-name=tab<CR>
+  nnoremap <silent><leader>R :<C-u>Unite register -buffer-name=register<CR>
+  nnoremap <silent><leader>k :<C-u>Unite bookmark -buffer-name=bookmark<CR>
+  nnoremap <leader>c <Plug>(unite_restart)
+endif
+if neobundle#is_installed('neomru.vim')
+  nnoremap <silent><leader>r :<C-u>Unite file_mru -buffer-name=file_mru<CR>
+endif
+if neobundle#is_installed('unite-outline')
+  nnoremap <silent><leader>o :<C-u>Unite outline -buffer-name=outline<CR>
+endif
+
+if neobundle#is_installed('neocomplete')
+  inoremap <expr><C-g>     neocomplete#undo_completion()
+  inoremap <expr><C-l>     neocomplete#complete_common_string()
+
+  "" Recommended key-mappings.
+  "" <CR>: close popup and save indent.
+  inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+  function! s:my_cr_function()
+      return neocomplete#close_popup() . "\<CR>"
+      " For no inserting <CR> key.
+      "return pumvisible() ? neocomplete#close_popup() : "\<CR>"
+  endfunction
+  "" <TAB>: completion.
+  inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+  "" <C-h>, <BS>: close popup and delete backword char.
+  inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+  inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+  inoremap <expr><C-y>  neocomplete#close_popup()."\<C-y>"
+  inoremap <expr><C-e>  neocomplete#cancel_popup()."\<C-e>"
+  "" Close popup by <Space>.
+  "inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() :
+  "\<Space>"
+endif
 
 " neosnippet
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
+if neobundle#is_installed('neosnippet')
+  imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+  smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+  xmap <C-k>     <Plug>(neosnippet_expand_target)
 
-"" SuperTab like snippets behavior.
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: "\<TAB>"
+  "" SuperTab like snippets behavior.
+  imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+  \ "\<Plug>(neosnippet_expand_or_jump)"
+  \: pumvisible() ? "\<C-n>" : "\<TAB>"
+  smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+  \ "\<Plug>(neosnippet_expand_or_jump)"
+  \: "\<TAB>"
+endif
