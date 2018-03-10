@@ -10,6 +10,14 @@ augroup END
 
 augroup FileTypeConfig
   au!
+  " When editing a file, always jump to the last known cursor position.
+  " Don't do it when the position is invalid or when inside an event handler
+  " (happens when dropping a file on gvim).
+  au BufReadPost *
+        \ if line("'\"") > 0 && line("'\"") <= line("$") |
+        \   exe "normal g`\"" |
+        \ endif
+
   au FileType *                 setlocal formatoptions=tcrqlmB nocindent    comments&
   au FileType vim               setlocal shiftwidth=2
   au FileType zsh               setlocal shiftwidth=2
@@ -27,4 +35,7 @@ augroup FileTypeConfig
   " For ChangeLog
   au FileType changelog let g:changelog_username="Toshiya NISHIO <toshiya240@gmail.com>"
   au FileType changelog setlocal noexpandtab
+
+  " quick close
+  au FileType qf,help,man nnoremap <buffer> q :bd!<CR>
 augroup END
