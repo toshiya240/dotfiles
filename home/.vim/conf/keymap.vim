@@ -31,22 +31,22 @@ if neobundle#is_installed('emmet-vim')
 endif
 
 if neobundle#is_installed('unite.vim')
-  nnoremap <silent><leader>u :<C-u>Unite source -buffer-name=source<CR>
-  nnoremap <silent><leader>f :<C-u>Unite file -buffer-name=file<CR>
-  nnoremap <silent><leader>F :<C-u>Unite file -buffer-name=file -input=`expand('%:h')`/*<CR>
+  nnoremap <silent><leader>u :<C-u>Unite source -start-insert -buffer-name=source<CR>
+  nnoremap <silent><leader>f :<C-u>Unite file -start-insert -buffer-name=file<CR>
+  nnoremap <silent><leader>F :<C-u>Unite file -start-insert -buffer-name=file -input=`expand('%:h')`/*<CR>
   nnoremap <silent><leader><space> :<C-u>Unite -start-insert file_rec/async<CR>
-  nnoremap <silent><leader>b :<C-u>Unite buffer_tab -buffer-name=buffer<CR>
-  nnoremap <silent><leader>B :<C-u>Unite buffer -buffer-name=buffer<CR>
-  nnoremap <silent><leader>t :<C-u>Unite tab -buffer-name=tab<CR>
+  nnoremap <silent><leader>b :<C-u>Unite buffer_tab -start-insert -buffer-name=buffer<CR>
+  nnoremap <silent><leader>B :<C-u>Unite buffer -start-insert -buffer-name=buffer<CR>
+  nnoremap <silent><leader>t :<C-u>Unite tab -start-insert -buffer-name=tab<CR>
   nnoremap <silent><leader>R :<C-u>Unite register -buffer-name=register<CR>
   nnoremap <silent><leader>k :<C-u>Unite bookmark -buffer-name=bookmark<CR>
   nnoremap <leader>c <Plug>(unite_restart)
 endif
 if neobundle#is_installed('neomru.vim')
-  nnoremap <silent><leader>r :<C-u>Unite file_mru -buffer-name=file_mru<CR>
+  nnoremap <silent><leader>r :<C-u>Unite file_mru -start-insert -buffer-name=file_mru<CR>
 endif
 if neobundle#is_installed('unite-outline')
-  nnoremap <silent><leader>o :<C-u>Unite outline -buffer-name=outline<CR>
+  nnoremap <silent><leader>o :<C-u>Unite outline -start-insert -buffer-name=outline<CR>
 endif
 
 if neobundle#is_installed('neocomplete')
