@@ -3,16 +3,7 @@
 #
 source ~/.zplug/init.zsh
 
-zplug "clvv/fasd", as:command, hook-build:"{ PREFIX=$HOME make install }"
-
-zplug "junegunn/fzf-bin", \
-    from:gh-r, \
-    as:command, \
-    rename-to:fzf, \
-    use:"*darwin*amd64*"
-
 zplug "b4b4r07/enhancd", use:"init.sh", defer:2
-
 zplug "valiev/almostontop", use:"*.zsh"
 
 # local plugins
@@ -32,7 +23,6 @@ zplug "modules/ruby",                     from:prezto
 zplug "modules/syntax-highlighting",      from:prezto, defer:2
 zplug "modules/history-substring-search", from:prezto, defer:3
 zplug "modules/autosuggestions",          from:prezto, defer:3
-zplug "modules/fasd",                     from:prezto
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
