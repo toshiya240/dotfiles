@@ -80,6 +80,6 @@ TMPPREFIX="${TMPDIR%/}/zsh"
 #
 # Homebrew
 #
-if [[ -f $HOME/secret/homebrew-conf.sh ]]; then
-  source $HOME/secret/homebrew-conf.sh
+if [[ -f $HOME/.secret/homebrew-conf.sh ]]; then
+  source $HOME/.secret/homebrew-conf.sh
 fi

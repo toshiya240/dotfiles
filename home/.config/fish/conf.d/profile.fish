@@ -21,7 +21,6 @@ if status is-login >/dev/null; and test -z "$TMUX"
     for i in \
             /usr/local/{bin,sbin} \
             /usr/local/share/npm/bin \
-            /Applications/MacVim.app/Contents/MacOS \
             $HOME/.cabal/bin \
             $HOME/bin
         if not contains $i $PATH
@@ -47,8 +46,8 @@ if status is-login >/dev/null; and test -z "$TMUX"
     #
     # Homebrew
     #
-    if test -f $HOME/secret/homebrew-conf.fish
-        source $HOME/secret/homebrew-conf.fish
+    if test -f $HOME/.secret/homebrew-conf.fish
+        source $HOME/.secret/homebrew-conf.fish
     end
 
 end

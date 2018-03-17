@@ -2,7 +2,7 @@
 	name = Toshiya NISHIO
 	email = toshiya240@gmail.com
 [include]
-	path = ~/secret/gitconfig.local
+	path = ~/.secret/gitconfig.local
 [alias]
 	co = checkout
 	st = status
