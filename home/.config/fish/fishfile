@@ -5,6 +5,7 @@ fisherman/fishkit
 fisherman/fzf
 fisherman/get
 fisherman/getopts
+decors/fish-ghq
 fisherman/menu
 toshiya240/fish-tmux
 fisherman/z
