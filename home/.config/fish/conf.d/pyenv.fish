@@ -7,8 +7,9 @@ if status is-login >/dev/null
     #       やむなく PATH の要素を重複させておく。
     #
 
-    if type rbenv >/dev/null ^&1
-        rbenv init - | source
+    if type pyenv >/dev/null ^&1
+        pyenv init - | source
     end
 
 end
+
