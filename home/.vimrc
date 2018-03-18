@@ -12,7 +12,7 @@ let mapleader="\<Space>"
 "----------------------------------------------------------------------
 " 日本語を扱うために
 "
-set fileencodings=ucs-bom,iso-2022-jp,utf-8,euc-jp,cp932
+set fileencodings=ucs-bom,utf-8,iso-2022-jp,euc-jp,cp932
 set iminsert=0
 set imsearch=0
 
