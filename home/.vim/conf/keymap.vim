@@ -26,11 +26,7 @@ nnoremap <silent><leader>s :<C-u>set spell!<CR>:set spell?<CR>
 " grep
 nnoremap <silent><leader>/ :grep <C-r><C-w><CR>
 
-if neobundle#is_installed('emmet-vim')
-  let g:user_emmet_leader_key = '<C-c>'
-endif
-
-if neobundle#is_installed('unite.vim')
+if dein#tap('unite.vim')
   nnoremap <silent><leader>u :<C-u>Unite source -start-insert -buffer-name=source<CR>
   nnoremap <silent><leader>f :<C-u>Unite file -start-insert -buffer-name=file<CR>
   nnoremap <silent><leader>F :<C-u>Unite file -start-insert -buffer-name=file -input=`expand('%:h')`/*<CR>
@@ -42,14 +38,14 @@ if neobundle#is_installed('unite.vim')
   nnoremap <silent><leader>k :<C-u>Unite bookmark -buffer-name=bookmark<CR>
   nnoremap <leader>c <Plug>(unite_restart)
 endif
-if neobundle#is_installed('neomru.vim')
+if dein#tap('neomru.vim')
   nnoremap <silent><leader>r :<C-u>Unite file_mru -start-insert -buffer-name=file_mru<CR>
 endif
-if neobundle#is_installed('unite-outline')
+if dein#tap('unite-outline')
   nnoremap <silent><leader>o :<C-u>Unite outline -start-insert -buffer-name=outline<CR>
 endif
 
-if neobundle#is_installed('neocomplete')
+if dein#tap('neocomplete')
   inoremap <expr><C-g>     neocomplete#undo_completion()
   inoremap <expr><C-l>     neocomplete#complete_common_string()
 
@@ -74,7 +70,7 @@ if neobundle#is_installed('neocomplete')
 endif
 
 " neosnippet
-if neobundle#is_installed('neosnippet')
+if dein#tap('neosnippet')
   imap <C-k>     <Plug>(neosnippet_expand_or_jump)
   smap <C-k>     <Plug>(neosnippet_expand_or_jump)
   xmap <C-k>     <Plug>(neosnippet_expand_target)

@@ -1,0 +1,14 @@
+[[plugins]]
+repo = 'Shougo/neocomplete'
+on_i = 1
+hook_add = 'runtime! dein/conf/neocomplete.vim'
+
+[[plugins]]
+repo = 'Shougo/neosnippet'
+on_i = 1
+hook_add = 'runtime! dein/conf/neosnippet.vim'
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+on_i = 1
+on_ft = 'snippet'

@@ -124,70 +124,27 @@ endfunction
 map <silent><leader>d :call SearchDash()<CR>
 
 "----------------------------------------------------------------------
-" NeoBundle
-if has('vim_starting')
-    set runtimepath+=~/.vim/bundle/neobundle.vim/
+" dein
+if &compatible
+  set nocompatible
+endif
+let s:dein_base_dir = expand('~/.vim/dein')
+execute 'set runtimepath+=' . s:dein_base_dir . '/repos/github.com/Shougo/dein.vim'
+
+if dein#load_state(s:dein_base_dir)
+  call dein#begin(s:dein_base_dir)
+
+  call dein#load_toml(s:dein_base_dir . '/plugins.toml',  {'lazy': 0})
+  call dein#load_toml(s:dein_base_dir . '/filetype.toml', {'lazy': 1})
+  call dein#load_toml(s:dein_base_dir . '/insmode.toml',  {'lazy': 1})
+
+  call dein#end()
+  call dein#save_state()
 endif
 
-call neobundle#begin(expand('~/.vim/bundle/'))
-
-" Let NeoBundle manage NeoBundle
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" Bundles
-NeoBundle 'Shougo/vimproc'
-
-"" Unite
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'Shougo/unite-outline'
-NeoBundle 'thinca/vim-unite-history'
-NeoBundle 'Shougo/tabpagebuffer.vim'
-
-" editing
-NeoBundle 'Shougo/neocomplete'
-NeoBundle 'Konfekt/FastFold'
-NeoBundle 'Shougo/neosnippet'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'tpope/vim-unimpaired'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'tpope/vim-repeat'
-NeoBundle 'Align'
-
-" devel
-NeoBundle 'scrooloose/syntastic'
-"" git
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'gregsexton/gitv'
-NeoBundle 'idanarye/vim-merginal'
-NeoBundle 'cohama/agit.vim'
-
-" filetype
-"NeoBundle 'vim-scripts/fish-syntax'
-NeoBundleLazy 'dag/vim-fish'
-NeoBundleLazy 'rcmdnk/vim-markdown'
-NeoBundleLazy 'joker1007/vim-markdown-quote-syntax'
-NeoBundleLazy 'kchmck/vim-coffee-script'
-NeoBundleLazy 'jvirtanen/vim-octave'
-NeoBundleLazy 'mattn/emmet-vim'
-augroup NeoBundleLazyFileType
-  au!
-  au FileType fish         NeoBundleSource vim-fish
-  au FileType markdown     NeoBundleSource vim-markdown vim-markdown-quote-syntax
-  au FileType coffee       NeoBundleSource vim-coffee-script
-  au FileType octave       NeoBundleSource vim-octave
-  au FileType html,xml,css NeoBundleSource emmet-vim
-augroup END
-
-" status line
-NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'majutsushi/tagbar'
-NeoBundle 'ryanoasis/vim-devicons'
-
-" other
-NeoBundle 'info.vim'
-
-call neobundle#end()
+if dein#check_install()
+  call dein#install()
+endif
 
 " enable ftplugin
 filetype plugin on

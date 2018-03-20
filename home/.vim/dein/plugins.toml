@@ -1,0 +1,51 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/vimproc'
+build = 'make'
+
+# Unite
+[[plugins]]
+repo = 'Shougo/unite.vim'
+hook_add = 'runtime! dein/conf/unite.vim'
+
+[[plugins]]
+repo = 'Shougo/neomru.vim'
+
+[[plugins]]
+repo = 'Shougo/unite-outline'
+
+# status line
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+hook_add = 'runtime! dein/conf/lightline.vim'
+
+[[plugins]]
+repo = 'majutsushi/tagbar'
+
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+
+# editing
+[[plugins]]
+repo = 'tpope/vim-unimpaired'
+
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+[[plugins]]
+repo = 'tpope/vim-repeat'
+
+[[plugins]]
+repo = 'tpope/vim-commentary'
+
+[[plugins]]
+repo = 'vim-scripts/Align'
+
+# devel
+[[plugins]]
+repo = 'scrooloose/syntastic'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
