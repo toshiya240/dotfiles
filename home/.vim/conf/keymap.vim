@@ -26,23 +26,17 @@ nnoremap <silent><leader>s :<C-u>set spell!<CR>:set spell?<CR>
 " grep
 nnoremap <silent><leader>/ :grep <C-r><C-w><CR>
 
-if dein#tap('unite.vim')
-  nnoremap <silent><leader>u :<C-u>Unite source -start-insert -buffer-name=source<CR>
-  nnoremap <silent><leader>f :<C-u>Unite file -start-insert -buffer-name=file<CR>
-  nnoremap <silent><leader>F :<C-u>Unite file -start-insert -buffer-name=file -input=`expand('%:h')`/*<CR>
-  nnoremap <silent><leader><space> :<C-u>Unite -start-insert file_rec/async<CR>
-  nnoremap <silent><leader>b :<C-u>Unite buffer_tab -start-insert -buffer-name=buffer<CR>
-  nnoremap <silent><leader>B :<C-u>Unite buffer -start-insert -buffer-name=buffer<CR>
-  nnoremap <silent><leader>t :<C-u>Unite tab -start-insert -buffer-name=tab<CR>
-  nnoremap <silent><leader>R :<C-u>Unite register -buffer-name=register<CR>
-  nnoremap <silent><leader>k :<C-u>Unite bookmark -buffer-name=bookmark<CR>
-  nnoremap <leader>c <Plug>(unite_restart)
+if dein#tap('denite.nvim')
+  nnoremap <silent><leader>f :<C-u>Denite file -buffer-name=file<CR>
+  nnoremap <silent><leader>F :<C-u>Denite file -buffer-name=file -input=`expand('%:h')`/<CR>
+  nnoremap <silent><leader><space> :<C-u>Denite file_rec<CR>
+  nnoremap <silent><leader>b :<C-u>Denite buffer -buffer-name=buffer<CR>
+  nnoremap <silent><leader>R :<C-u>Denite register -buffer-name=register<CR>
+  nnoremap <silent><leader>k :<C-u>Denite bookmark -buffer-name=bookmark<CR>
+  nnoremap <silent><leader>o :<C-u>Denite outline -buffer-name=outline<CR>
 endif
 if dein#tap('neomru.vim')
-  nnoremap <silent><leader>r :<C-u>Unite file_mru -start-insert -buffer-name=file_mru<CR>
-endif
-if dein#tap('unite-outline')
-  nnoremap <silent><leader>o :<C-u>Unite outline -start-insert -buffer-name=outline<CR>
+  nnoremap <silent><leader>r :<C-u>Denite file_mru -buffer-name=file_mru<CR>
 endif
 
 if dein#tap('neocomplete')
