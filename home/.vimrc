@@ -128,15 +128,15 @@ map <silent><leader>d :call SearchDash()<CR>
 if &compatible
   set nocompatible
 endif
-let s:dein_base_dir = expand('~/.vim/dein')
-execute 'set runtimepath+=' . s:dein_base_dir . '/repos/github.com/Shougo/dein.vim'
+let g:dein_base_dir = expand('~/.vim/dein')
+execute 'set runtimepath+=' . g:dein_base_dir . '/repos/github.com/Shougo/dein.vim'
 
-if dein#load_state(s:dein_base_dir)
-  call dein#begin(s:dein_base_dir)
+if dein#load_state(g:dein_base_dir)
+  call dein#begin(g:dein_base_dir)
 
-  call dein#load_toml(s:dein_base_dir . '/conf/plugins.toml',  {'lazy': 0})
-  call dein#load_toml(s:dein_base_dir . '/conf/filetype.toml', {'lazy': 1})
-  call dein#load_toml(s:dein_base_dir . '/conf/insmode.toml',  {'lazy': 1})
+  call dein#load_toml(g:dein_base_dir . '/conf/plugins.toml',  {'lazy': 0})
+  call dein#load_toml(g:dein_base_dir . '/conf/filetype.toml', {'lazy': 1})
+  call dein#load_toml(g:dein_base_dir . '/conf/insmode.toml',  {'lazy': 1})
 
   call dein#end()
   call dein#save_state()

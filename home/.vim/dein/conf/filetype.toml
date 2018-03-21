@@ -9,7 +9,7 @@ on_ft = ['fish']
 [[plugins]]
 repo = 'rcmdnk/vim-markdown'
 on_ft = ['markdown']
-hook_add = 'runtime! dein/rc/markdown.vim'
+hook_add = 'execute "source " . g:dein_base_dir . "/rc/markdown.vim"'
 
 [[plugins]]
 repo = 'joker1007/vim-markdown-quote-syntax'
