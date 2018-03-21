@@ -134,9 +134,9 @@ execute 'set runtimepath+=' . s:dein_base_dir . '/repos/github.com/Shougo/dein.v
 if dein#load_state(s:dein_base_dir)
   call dein#begin(s:dein_base_dir)
 
-  call dein#load_toml(s:dein_base_dir . '/plugins.toml',  {'lazy': 0})
-  call dein#load_toml(s:dein_base_dir . '/filetype.toml', {'lazy': 1})
-  call dein#load_toml(s:dein_base_dir . '/insmode.toml',  {'lazy': 1})
+  call dein#load_toml(s:dein_base_dir . '/conf/plugins.toml',  {'lazy': 0})
+  call dein#load_toml(s:dein_base_dir . '/conf/filetype.toml', {'lazy': 1})
+  call dein#load_toml(s:dein_base_dir . '/conf/insmode.toml',  {'lazy': 1})
 
   call dein#end()
   call dein#save_state()
