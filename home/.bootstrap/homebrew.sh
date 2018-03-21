@@ -1,6 +1,6 @@
 #! /bin/bash
 
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install rcmdnk/file/brew-file
 brew file set_repo toshiya240/Brewfile
 brew file install
