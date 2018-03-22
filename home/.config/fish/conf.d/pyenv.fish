@@ -6,8 +6,7 @@ if status is-login >/dev/null
     #       function 定義は継承されないので
     #       やむなく PATH の要素を重複させておく。
     #
-
-    if type pyenv >/dev/null ^&1
+    if type -q pyenv
         pyenv init - | source
     end
 

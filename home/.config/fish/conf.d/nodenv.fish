@@ -6,8 +6,9 @@ if status is-login >/dev/null
     #       function 定義は継承されないので
     #       やむなく PATH の要素を重複させておく。
     #
-    if type -q rbenv
-        rbenv init - | source
+    if type -q nodenv
+        nodenv init - | source
     end
 
 end
+
