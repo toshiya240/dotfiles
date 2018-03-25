@@ -113,8 +113,11 @@ source $VIMRUNTIME/ftplugin/man.vim
 let autodate_format = '%Y/%m/%d %H:%M:%S'
 
 " Open in Marked
-command OpenInMarked !open -a Marked %:p
-map <leader>m :OpenInMarked<CR>
+function! OpenInMarked()
+  silent !open -a Marked %:p
+  redraw!
+endfunction
+map <leader>m :call OpenInMarked()<CR>
 
 " Search Dash for word under cursor
 function! SearchDash()
