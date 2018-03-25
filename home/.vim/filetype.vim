@@ -18,7 +18,7 @@ augroup FileTypeConfig
         \   exe "normal g`\"" |
         \ endif
 
-  au FileType *                 setlocal formatoptions=tcrqlmB nocindent    comments&
+  au FileType *                 setlocal formatoptions=tcrqlmB nocindent    comments& dictionary<
   au FileType vim               setlocal shiftwidth=2
   au FileType zsh               setlocal shiftwidth=2
   au FileType c,cpp             setlocal formatoptions=croqlB  cindent      comments=sr:/*,mb:*,ex:*/,://

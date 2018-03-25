@@ -91,6 +91,10 @@ augroup matchit
   au FileType ruby let b:match_words = '\<\(module\|class\|def\|begin\|do\|if\|unless\|case\)\>:\<\(elsif\|when\|rescue\)\>:\<\(else\|ensure\)\>:\<end\>'
 augroup END
 
+" dict
+set dictionary+=/usr/share/dict/words
+set dictionary+=/usr/share/dict/connectives
+
 "----------------------------------------------------------------------
 " misc
 
