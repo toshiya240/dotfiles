@@ -9,7 +9,7 @@
 	br = branch
 [core]
 	excludesfile = ~/.gitignore_global
-	editor = Vim -f
+	editor = vim -f
 [push]
 	default = upstream
 [pull]
