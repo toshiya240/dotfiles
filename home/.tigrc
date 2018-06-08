@@ -10,4 +10,10 @@ bind generic <LessThan> move-first-line
 bind generic > move-last-line
 bind generic J next
 bind generic K previous
+
 bind status C !git commit -v
+bind status + !git commit -v --amend
+
+#bind refs d ?git branch -d %(branch)
+bind refs B ?git checkout -b %(branch) %(remote)/%(branch)
+bind refs D ?git push --delete %(remote) %(branch)
