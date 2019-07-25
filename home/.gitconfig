@@ -1,6 +1,3 @@
-[user]
-	name = Toshiya NISHIO
-	email = toshiya240@gmail.com
 [include]
 	path = ~/.secret/gitconfig.local
 [alias]
